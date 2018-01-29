@@ -278,6 +278,7 @@ void movement()
 	    
 		    
 	//Shape *s;
+		
 
 
 
@@ -295,6 +296,20 @@ void render()
 {
 	glClear(GL_COLOR_BUFFER_BIT);
 	//Draw shapes...
+	Shape *s;
+	glColor3ub(90, 160, 90);
+	s = &g.box;
+	glPushMatrix();
+	glTranslatef(s->center.x, s->center.y, s->center.z);
+	float w, h;
+	w = s->width;
+	h = s->height;
+	glVertex2i(-w, -h);
+		glVertex2i( w,  h);
+		glVertex2i( w, -h);
+		glVertex2i( w, -h);
+		glVertex2i(-w, -h);
+	
 	//
 	//Draw a box here.
 	Shape *s;
