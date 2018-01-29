@@ -313,6 +313,19 @@ void render()
 		glVertex2i( w,  h);
 		glVertex2i( w, -h);
 		glVertex2i(-w, -h);
+	Shape *s2;
+	glColor3ub(90, 160, 90);
+	s2 = &g.box;
+	glPushMatrix();
+	glTranslatef(s2->center.x, s2->center.y, s2->center.z);
+	float w, h;
+	w = s2->width;
+	h = s2->height;
+	glVertex2i(-w, -h);
+		glVertex2i( w,  -h);
+		glVertex2i( w,  h);
+		glVertex2i( -w, h);
+		glVertex2i(-w, -h);
 	
 
 	glEnd();
