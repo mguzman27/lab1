@@ -305,20 +305,23 @@ void render()
 	float w, h;
 	w = s->width;
 	h = s->height;
-	glBegin(GL_QUADS);
-		glVertex2i(-w, -h);
+	glVertex2i(-w, -h);
 		glVertex2i(-w,  h);
 		glVertex2i( w,  h);
 		glVertex2i( w, -h);
+		glVertex2i(-w, -h);
+	
+
 	glEnd();
 	glPopMatrix();
 	//
+	
 	//Draw the particle here.
 	for (int i=0; i<g.n; i++) {
 	glPushMatrix();
 	glColor3ub(150, 160, 230);
 	Vec *c = &g.particle[i].s.center;
-	w =
+	w = 
 	h = 2;
 	glBegin(GL_QUADS);
 		glVertex2i(c->x-w, c->y-h);
