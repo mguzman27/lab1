@@ -42,7 +42,7 @@ using namespace std;
 
 const int MAX_PARTICLES = 200;
 const float GRAVITY = 0.1;
-
+const float MAX_BOX = 5;
 //some structures
 
 struct Vec {
